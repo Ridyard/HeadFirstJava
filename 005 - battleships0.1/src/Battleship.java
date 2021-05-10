@@ -8,21 +8,19 @@ public class Battleship {
 
 		int g = Integer.parseInt(guess);
 		String result = "miss";
+		
 		for (int i : locationCells){
 			if (g == i){
 				numHits++;
-				if (numHits == locationCells.length){
-					result = "kill";
-					break;
-				}
-				else {
-					result = "hit";
-					break;
-				}				
-			}			
+				result = "hit";
+				break;
+			}
+		}
+		
+		if (numHits == locationCells.length){
+			result = "kill";
 		}
 		return result;
-		
 	}
 	
 	public void setLocationCells(int[] loc){

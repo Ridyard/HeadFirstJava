@@ -2,7 +2,9 @@
 public class battleshipTester {
 
 	public static void main(String[] args) {
+		
 		Battleship b1 = new Battleship();
+		
 		int[] loc = {2,3,4}; 
 		b1.setLocationCells(loc);
 		
